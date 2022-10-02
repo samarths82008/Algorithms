@@ -1,0 +1,11 @@
+def sum_elements(S, n):
+
+    if n == 0:
+        return 0
+    else:
+        # return sum of the first n-1 terms plus the nth term
+        return sum_elements(S, n-1) + S[n-1]
+    
+
+S = [4,3,6,2,8,9,3,2,8,5,1,7,2,8,3,7]
+print(sum_elements(S,4))
