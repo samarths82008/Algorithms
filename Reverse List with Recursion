@@ -1,0 +1,10 @@
+def ReverseList(s,n):
+    if n == 0:
+        return []
+    else:
+        # makes the nth element the (length of the list - n)'s element
+        return [s[n-1]] + ReverseList(s,n-1)
+    
+
+s = [4,3,6,2,8,9,3,2,8,5,1,7,2,8,3,7]
+print(ReverseList(s,16))
