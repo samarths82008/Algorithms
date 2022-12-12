@@ -1,0 +1,11 @@
+1 def remove(self, value):
+2 ”””Remove first occurrence of value (or raise ValueError).”””
+3 # note: we do not consider shrinking the dynamic array in this version
+4 for k in range(self. n):
+5 if self. A[k] == value: # found a match!
+6 for j in range(k, self. n − 1): # shift others to fill gap
+7 self. A[j] = self. A[j+1]
+8 self. A[self. n − 1] = None # help garbage collection
+9 self. n −= 1 # we have one less item
+10 return # exit immediately
+11 raise ValueError( value not found ) # only reached if no match
